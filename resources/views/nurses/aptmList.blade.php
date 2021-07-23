@@ -3,7 +3,11 @@
 @section('content')
 <div class="container">
 
-    <div class="h3">Appointment List</div>
+    <div class="h3">
+        Appointment List
+        <button class="btn btn-primary float-right" onclick="location.href='/nurse'">Home</button>
+    </div>
+    
 
     <table class="table table-bordered bg-white table-striped">
         <tr>

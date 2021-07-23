@@ -92,17 +92,31 @@
 
                         </div>
 
-                        
-
                         <div class="pt-4">
                             <div class="col-12">
                                 <button class="btn btn-primary">Update</button>
                             </div>
                         </div>
 
+                        <div class="col-12 pt-4">
+
+                            <form form method="post" enctype="multipart/form-data" action="/nurse/AptmList/{{ $appointment->id }}/sl">
+                                @csrf
+
+                                <label for="s_doc"><strong>Doctor:</strong></label>
+                                <select name="s_doc" id="s_doc">
+                                <option value="0">None</option>
+                                <option value="1">Special List Doctor</option>
+                                </select>
+                                <br><br>
+                                <button class="btn btn-primary">Update</button>
+                            </form>
+
+                        </div>
+
                     </form>
 
-                    <!-- yoyotest
+                    <!--
                     <script>
                         function updateStatus() {
                             const id = document.getElementById("user_id").innerHTML;

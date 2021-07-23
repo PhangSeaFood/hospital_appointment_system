@@ -43,7 +43,6 @@ class User extends Authenticatable
 
     public function appointments()
     {
-        return $this->hasMany(Appointment::class); //Model folder
-        //->latest(); //descending order project
+        return $this->hasMany(Appointment::class);
     }
 }

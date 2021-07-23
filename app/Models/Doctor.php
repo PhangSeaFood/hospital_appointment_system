@@ -18,4 +18,9 @@ class Doctor extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function specialLists()
+    {
+        return $this->hasMany(SpecialList::class);
+    }
 }

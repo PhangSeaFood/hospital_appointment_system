@@ -36,3 +36,5 @@ Route::view('/nurse', 'nurse');
 Route::get('/nurse/AptmList',[App\Http\Controllers\NursesController::class, 'index']);
 Route::get('/nurse/AptmList/{appointment}/edit',[App\Http\Controllers\NursesController::class, 'edit']);
 Route::patch('/nurse/AptmList/{appointment}',[App\Http\Controllers\NursesController::class, 'update']);
+
+Route::post('/nurse/AptmList/{appointment}/sl',[App\Http\Controllers\SpecialListsController::class, 'store']);
