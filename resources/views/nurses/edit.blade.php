@@ -97,52 +97,24 @@
                                 <button class="btn btn-primary">Update</button>
                             </div>
                         </div>
-
-                        <div class="col-12 pt-4">
-
-                            <form form method="post" enctype="multipart/form-data" action="/nurse/AptmList/{{ $appointment->id }}/sl">
-                                @csrf
-
-                                <label for="s_doc"><strong>Doctor:</strong></label>
-                                <select name="s_doc" id="s_doc">
-                                <option value="0">None</option>
-                                <option value="1">Special List Doctor</option>
-                                </select>
-                                <br><br>
-                                <button class="btn btn-primary">Update</button>
-                            </form>
-
-                        </div>
-
                     </form>
 
-                    <!--
-                    <script>
-                        function updateStatus() {
-                            const id = document.getElementById("user_id").innerHTML;
-                            const time = document.getElementById("a_time").innerHTML;
-                            const date = document.getElementById("a_date").innerHTML;
-                            const code = document.getElementById("a_code").innerHTML;
-                            const sta = document.getElementById("status").innerHTML;
-                            const updateData = {
-                            "_token": "{{ csrf_token() }}",
-                                user_id: id,
-                                a_time: time,
-                                a_date: date,
-                                a_code: code,
-                                status: sta
-                            }
-                            console.log(updateData)
-                            $.ajax({
-                            type: "PATCH",
-                            url: '/nurse/AptmList/{{ $appointment->id }}',
-                            data: updateData,
-                            success: function(data) {
-                                alert("Update success.")
-                            }
-                            })
-                        }
-                    </script> -->
+                    <div class="col-12 pt-4">
+
+                        <form form method="post" enctype="multipart/form-data" action="/nurse/AptmList/{{ $appointment->id }}/sl">
+                            @csrf
+
+                            <label for="s_doc"><strong>Doctor:</strong></label>
+                            <select name="s_doc" id="s_doc">
+                            <option value="0">None</option>
+                            <option value="1">Special List Doctor</option>
+                            </select>
+                            <br><br>
+                            <button class="btn btn-primary">Update</button>
+                        </form>
+
+                    </div>
+                    
                 </div>
             </div>
         </div>

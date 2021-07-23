@@ -17,8 +17,6 @@ class SpecialListsController extends Controller
         $specialList->a_code = $body["a_code"];
         $specialList->status = false;
         $specialList->save();
-
-        //dd(request()->all());
         
         return redirect();
     }

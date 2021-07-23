@@ -23,16 +23,6 @@ class NursesController extends Controller
 
     public function update(Appointment $appointment)
     {
-        /*
-        $body =  $request->all();
-        $appointment = new Appointment;
-        $appointment->user_id = $body["user_id"];
-        $appointment->a_time = $body["a_time"];
-        $appointment->a_date = $body["a_date"];
-        $appointment->a_code = $body["a_code"];
-        $appointment->status = $body["status"];
-        $appointment->save();
-        */
 
         $data = request()->validate([
             'user_id' => 'required',
